@@ -1,0 +1,28 @@
+Inversion of Control (IOC)
+----------------------------------------------------------------------------------------------
+@Autowired			use- class obj cre
+@Value	("${...}")/("....")	read application.properties inside key & value
+@Component	(1) Component	
+@Service	(2) service	
+@Repository	(3) dao	
+@Configuration	(4) all in one	
+@Bean		
+@Qualifier		
+@ComponentScan	add main class	
+
+note:- @Component, @Service, @Repository, @Configuration of these one uses 
+ (ya paiki ekahi use nhi kela tar baki use nhi karata yet)"			
+			
+----------------------------------------------------------------------------------------------			
+AOP
+----------------------------------------------------------------------------------------------	
+Add dependency :- spring-boot-starter-aop			
+@EnableAspectJAutoProxy		Must-Add in starter class below annotations.
+@Aspect		Must
+@Before("execution(*  package_path.class_Name.Methad_name()");  		
+@After("execution(*  package_path.class_Name.Methad_name()");		
+@Around("execution(*  package_path.class_Name.Methad_name()");		
+@AfterThrowing		
+@Configuration		
+@thowable		
+
