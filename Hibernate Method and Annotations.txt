@@ -1,3 +1,27 @@
+==============================================================================================================
+class
+==============================================================================================================
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+Configuration cfg = new Configuration();
+	// hibernate cfg file will be parsed
+	// driver will be loaded
+cfg.configure("hibernet.cfg.xml");
+cfg.addAnnotatedClass(student.class);
+SessionFactory sf = cfg.buildSessionFactory();
+	// get one connection from connection factory
+Session session = sf.openSession();
+	// make a process commit and rollback (Lech:-04 25-03-22 t:-01:00:00)
+	// this line only use for 
+Transaction tt = session.beginTransaction();
+
+tt.commit();
+session.close();
+System.out.println("Done");
+--------------------------------------------------------------------------------------------
+Method
+--------------------------------------------------------------------------------------------
 Save:-		
     Student student = new Student();
 		student .setStudName("Kiran");
