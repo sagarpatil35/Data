@@ -1,0 +1,31 @@
+Save:-		
+    Student student = new Student();
+		student .setStudName("Kiran");   ......
+		session.save(student);
+
+
+SaveOrUpdate:-	
+    Student student = new Student();
+		student .setStudName("Kiran");  .......
+		session.saveOrUpdate(student);
+
+
+Load:-		
+      Student student = session.load(Student.class, 1);
+
+Update:-		
+    Student student = session.get(Student.class, 1);
+		student .setStudName("sagar");
+		session.update(student);
+
+Delete :- 
+		student student = session.get(Student.class, 1);
+		session.delete(student);
+
+Criteria	
+		Criteria criteria = session.createCriteria(Student.class);
+		// criteria .add(Restrictions.eq( "PassSubject" , math ));
+		List results = criteria.list();
+			for (student student : results ) {
+		      
+			}
