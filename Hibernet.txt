@@ -1,0 +1,39 @@
+Hibernate.cfg.xml :-
+==============================================================================================================
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd"> <hibernate-configuration>
+<session-factory>
+<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+<property name="hibernate.connection.password">root</property>
+<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/studentmanagement</property>
+<property name="hibernate.connection.username">root</property>
+<property name="hibernate.default_schema">studentmanagement</property>
+<property name="hbm2ddl.auto">update</property>
+<property name="show_sql">true</property>
+<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+</session-factory>
+</hibernate-configuration>
+
+==============================================================================================================
+class
+==============================================================================================================
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+Configuration cfg = new Configuration();
+	// hibernate cfg file will be parsed
+	// driver will be loaded
+cfg.configure("hibernet.cfg.xml");
+cfg.addAnnotatedClass(student.class);
+SessionFactory sf = cfg.buildSessionFactory();
+	// get one connection from connection factory
+Session session = sf.openSession();
+	// make a process commit and rollback (Lech:-04 25-03-22 t:-01:00:00)
+	// this line only use for 
+Transaction tt = session.beginTransaction();
+
+tt.commit();
+session.close();
+System.out.println("Done");
+
