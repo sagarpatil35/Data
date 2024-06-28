@@ -1,0 +1,32 @@
+WebServices - API 
+---------------------------------------------------------------------------------------
+spring core :- spring-boot-starter-web			
+deploying and restarting application automatically :- spring-boot-devtools
+
+@RestController			
+-----------------------------------------------------------------------------------------
+MVC
+-----------------------------------------------------------------------------------------
+compiling and running a jsp :- tomcat-jasper			
+spring-boot-starter-test			
+integration of jstl in jsp pages :- jstl
+
+@Controller		return HTML & JSP Page
+-----------------------------------------------------------------------------------------
+Both API & MVC
+-----------------------------------------------------------------------------------------
+@RequestMapping	("...../{...}")	
+@GetMapping	("...../{...}")	load = Select = Read
+@PostMapping	("...../{...}")	save = insert = Create
+@PutMapping	("...../{...}")	update
+@DeleteMapping	("...../{...}")	delete
+@RequestBody		
+@RequestParam		
+@PathVariable
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+			
+@SpringBootApplication		
+@EntityScan		              pojo cls scan
+			
