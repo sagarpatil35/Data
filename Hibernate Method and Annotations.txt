@@ -51,6 +51,9 @@ Criteria :-
 			for (student student : results ) {
 		      
 			}
+Query :-
+Query query = session.createQuery("from Student");
+List<Student> studentList = query.list();
 ------------------------------------------------------------------------------------------
 Annotations
 ------------------------------------------------------------------------------------------
