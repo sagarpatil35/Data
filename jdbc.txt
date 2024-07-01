@@ -1,0 +1,14 @@
+( insert )
+Class.forName("com.mysql.jdbc.Driver");  
+Connection con=DriverManager.getConnection( "jdbc:mysql://localhost:3306/sonoo","root","root");
+Statement stmt=con.createStatement();
+String q= "insert into student(sname) values (“sagar”)";
+stmt.executeUpdate(q);
+
+ ( Dynamic program )
+Class.forName("com.mysql.jdbc.Driver");  
+Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/sonoo","root","root");
+String q= "insert into student(sname) values (?)";
+PreparedStatement pstmt=con.prepareStatement(q);
+stmt.setString(1, "sagar”);
+pstmt.executeUpdate();
