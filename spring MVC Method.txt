@@ -1,3 +1,6 @@
+@Controller
+
+@RequestMapping("/")
 public ModelAndView Students() {
 	ModelAndView modelAndView = new ModelAndView();
 	modelAndView.setViewName(".........");
